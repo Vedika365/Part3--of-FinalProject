@@ -1,5 +1,7 @@
+import average.average;
+
 public class AverageDriver {
-    Average averageDriver = new Average();
+    average averageDriver = new average();
 
     
 }

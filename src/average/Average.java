@@ -3,39 +3,57 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package average;
-
+import java.util.Arrays;
+import java.util.Scanner;
 /**
  *
  * @author Vedika
  */
-public class Average {
-import java.util.Arrays;
+public class average {
+
+    private int[] data;
+    private double mean;
+    private double score;
+
+    //constructors
+    public average (int numberOfScores) {
+        score = new int [numberOfScores]; //allocating memory for the array
+     Scanner scanner = new Scanner(System.in);
+
+        //ask the user to enter each score
+        for (int i = 0; i< score.length; i++){
+            System.out.println("Enter score number " + (i + 1) + ":");  //we need to do +1 because it starts at 0
+            score[i]= scanner.nextDouble();
+        }
+
+    }
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //instance variables
-        int[] data;
-        double mean;
+        //for user input
+        Scanner scanner = new Scanner(System.in);
+        int scores = scanner.nextInt();
+        int[] score = new int[5];
 
-        //constructors
-        public Average(){
-            data = new int [5];  //the array can hold 5 elements
-            mean = 0.0;
-        }
-        public void calculateMean( ){
-          int sum =0;
-          for (int i=0; data.length; i++ ){
-              sum +=data[i];
-          }
-          mean = (double) sum/data.length;
-        }
-        public String toString(){
+
+
+            //ask the user to enter each score
 
         }
-        public void SelectionSort(){
+        public void calculateMean () {
+            int sum = 0;
+            for (int i = 0; data.length; i++) {
+                sum += data[i];
+            }
+            mean = (double) sum / data.length;
+        }
+        public String toString () {
+
+        }
+        public void SelectionSort () {
 
         }
     }
-    
-}
+
+
