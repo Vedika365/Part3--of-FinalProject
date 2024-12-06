@@ -13,11 +13,11 @@ public class average {
 
     private int[] data;
     private double mean;
-    private double score;
+    private double[] score;
 
     //constructors
     public average (int numberOfScores) {
-        score = new int [numberOfScores]; //allocating memory for the array
+        score = new double[numberOfScores]; //allocating memory for the array
      Scanner scanner = new Scanner(System.in);
 
         //ask the user to enter each score
@@ -46,7 +46,7 @@ public class average {
             for (int i = 0; data.length; i++) {
                 sum += data[i];
             }
-            mean = (double) sum / data.length;
+            mean = (sum / data.length);
         }
         public String toString () {
 
