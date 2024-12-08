@@ -10,7 +10,7 @@ package average;
  */
 public class Song {
 
-{ 
+
 private String title;   // The song's title 
 private String artist;  // The song's artist 
 /** 
@@ -30,9 +30,9 @@ The toString method
 @return A String object containing the name 
 of the song and the artist. 
 */ 
-public String toString() 
-{ 
-return title + " by " + artist + "\n"; 
+public String toString() {
+
+  return title + " by " + artist + "\n";
 } 
 } 
 
