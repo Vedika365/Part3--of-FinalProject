@@ -6,36 +6,34 @@ import java.io.*;
 This program creates a list of songs for a CD 
 by reading from a file. 
 */ 
-public class CompactDisk {
-    public static void main(String[] args) throws IOException {
+    public class CompactDisk {
 
-        Scanner input = new Scanner(new File("Classics.txt"));
-        String title;
-        String artist;
-// ADD LINES FOR TASK #3 HERE 
-// Declare an array of Song objects, called cd, // with 
-//a size of 6
+        public static void main(String[] args) throws IOException {
 
-        Song[] cd = new Song[6];
+             //I used notepad to save the classic.txt file and copied its path here
+            Scanner input = new Scanner(new File("C://Users//Vedika//Documents//Classics.txt"));
 
-        title = input.nextLine();
-        artist = input.nextLine();
-        // ADD LINES FOR TASK #3 HERE
-// Fill the array by creating a new song with 
-// the title and artist and storing it in the 
-// appropriate position in the array
-        for (int i = 0; i < cd.length; i++) {
-            title = input.nextLine();
-            artist = input.nextLine();
-            cd[i] = new Song(title, artist);
+                String title;
+                String artist;
+                //Task3 declaring an Array of size 6
+                Song[] cd = new Song[6];
+
+                //task 3 , filing the array by creating a new Song object with the title
+                //and artist and storing it in the appropriate position in the array
+
+            for(int i =0; i< cd.length; i++) {
+                title = input.nextLine();
+                artist = input.nextLine();
+                //creating a new Song object and store it in the array
+                cd [i] = new Song(title, artist);
+            }
+
+
+             //Task3 printing the content of the Array to the console
+                System.out.println("Contents of Classics:");
+                  for (int i = 0; i < cd.length; i++) {
+                        //printing each object in the Array
+                         System.out.println(cd[i].toString());
+                }
         }
-
-
-        System.out.println("Contents of Classics:");
-        for (int i = 0; i < cd.length; i++) {
-// ADD LINES FOR TASK #3 HERE 
-// Print the contents of the array to the console 
-        }
-
     }
-}
